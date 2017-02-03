@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'Back to main', homes_path, class: 'btn btn-info' %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @home.name %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @home.kind %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @home.number %>
+</p>
+
+<div class="pull-right">
+  <%= link_to 'Edit this data', edit_home_path(@home), class: 'btn btn-success' %>
+  <%= link_to 'Destroy this data', @home, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>

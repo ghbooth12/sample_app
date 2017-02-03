@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Homes</h1>
+<h1>Faker: <%= Faker::Commerce.price %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Kind</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><%= home.name %></td>
+        <td><%= home.kind %></td>
+        <td><%= home.number %></td>
+        <td><%= link_to 'Show', home, class: 'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_home_path(home), class: 'btn btn-warning' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home', new_home_path, class: 'btn btn-primary' %>
+
+
+<h1>=======TEST==========</h1>
+<%= @unit_result.inspect  %><br>
+<%= @unit_result.to_s.inspect  %>
+
+
+<br><br><br><br><br>
